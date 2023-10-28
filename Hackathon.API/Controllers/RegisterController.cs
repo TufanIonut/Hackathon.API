@@ -11,7 +11,7 @@ namespace Hackathon.API.Controllers
         [HttpPost]
         public IActionResult RegisterUser([FromBody]UserDTO userCredentials)
         {
-            if(userCredentials.CheckLoginCredentials(userCredentials))
+            if(userCredentials.CheckLoginCredentials(userCredentials)!=0)
             { 
                 return BadRequest("Sorry, an account with this email adress already exists");
             }
@@ -19,8 +19,7 @@ namespace Hackathon.API.Controllers
             {
                 userCredentials.RegisterUser(userCredentials);
                 return Ok("Registration Succesful");
-            }
-            
+            }          
         }
     }
 }

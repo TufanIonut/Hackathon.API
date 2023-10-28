@@ -15,22 +15,5 @@ namespace Hackathon.API.Entities
 
         public List<UserRoles> userRoles { get; set; }
 
-        public bool CheckLoginCredentials(UserCredentials credentials)
-        {
-            var parameters = new DynamicParameters();
-            parameters.Add("Email", credentials.EmailAdress);
-            parameters.Add("Password", credentials.UserPassword);
-            parameters.Add("IsValid", DbType.Boolean, direction: ParameterDirection.Output);
-            DataBaseConnection dataBaseConnection = new DataBaseConnection();
-            var connection = dataBaseConnection.ConnectToDataBase();
-            connection.Execute("CheckLoginCredentials", parameters, commandType: CommandType.StoredProcedure);
-            bool isValid = parameters.Get<int>("IsValid") == 1;
-
-            if (isValid)
-            {
-                return true;
-            }
-            return false;
-        }
     }
 }

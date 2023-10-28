@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jb9PSxKLYG9r7139M+Oajym/jUe2/sId9sSRhCz0nIQjG3HR6Mf06oyVZTYGPIPESO9z6lFZJtKHA5mM1PQa7Q==",
+  "dgSpecHash": "76HfKBTq8zVbihMHc6/Qr12hwF6BFqMBERGOfTZusFeRXBNOCns3wpI2enOoBfZDQSldmh4EjdVdpJUyUaeMUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ionut\\source\\repos\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj",
+  "projectFilePath": "C:\\Users\\Ionut\\Documents\\GitHub\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ionut\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Ionut\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

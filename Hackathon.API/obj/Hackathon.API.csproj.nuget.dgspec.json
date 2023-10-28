@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ionut\\source\\repos\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj": {}
+    "C:\\Users\\Ionut\\Documents\\GitHub\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ionut\\source\\repos\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj": {
+    "C:\\Users\\Ionut\\Documents\\GitHub\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ionut\\source\\repos\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj",
+        "projectUniqueName": "C:\\Users\\Ionut\\Documents\\GitHub\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj",
         "projectName": "Hackathon.API",
-        "projectPath": "C:\\Users\\Ionut\\source\\repos\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj",
+        "projectPath": "C:\\Users\\Ionut\\Documents\\GitHub\\Hackathon.API\\Hackathon.API\\Hackathon.API.csproj",
         "packagesPath": "C:\\Users\\Ionut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ionut\\source\\repos\\Hackathon.API\\Hackathon.API\\obj\\",
+        "outputPath": "C:\\Users\\Ionut\\Documents\\GitHub\\Hackathon.API\\Hackathon.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

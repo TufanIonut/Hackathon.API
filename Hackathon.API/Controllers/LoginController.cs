@@ -18,9 +18,9 @@ namespace Hackathon.API.Controllers
         public IActionResult LoginUser([FromBody]UserDTO userCredentials)
         {
 
-            if (userCredentials.CheckLoginCredentials(userCredentials))
+            if (userCredentials.CheckLoginCredentials(userCredentials)!=0)
             {
-                return Ok("Login Successful");
+                return Ok($"Login Successful,{userCredentials.CheckLoginCredentials(userCredentials)}");
             }
             return BadRequest("Login Failed, User or Password are invalid");
         }

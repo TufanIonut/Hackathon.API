@@ -20,22 +20,21 @@ namespace Hackathon.API.DTOs
             var connection = dataBaseConnection.ConnectToDataBase();
             connection.Execute("InsertUser",parameters , commandType: CommandType.StoredProcedure);
         }
-        public bool CheckLoginCredentials(UserDTO credentials)
+        public int CheckLoginCredentials(UserDTO credentials)
         {
             var parameters = new DynamicParameters();
             parameters.Add("Email", credentials.EmailAdress);
             parameters.Add("Password", credentials.UserPassword);
-            parameters.Add("IsValid", DbType.Boolean, direction: ParameterDirection.Output);
+            parameters.Add("UserId", DbType.Int32, direction: ParameterDirection.Output);
             DataBaseConnection dataBaseConnection = new DataBaseConnection();
             var connection = dataBaseConnection.ConnectToDataBase();
             connection.Execute("CheckLoginCredentials", parameters, commandType: CommandType.StoredProcedure);
-            bool isValid = parameters.Get<int>("IsValid") == 1;
-
-            if (isValid)
+            int UserId = parameters.Get<int>("UserId");
+            if (UserId!=-1)
             {
-                return true;
+                return UserId;
             }
-            return false;
+            return 0;
         }
     }
 }

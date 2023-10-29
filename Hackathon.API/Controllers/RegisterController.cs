@@ -1,4 +1,5 @@
 ﻿using Hackathon.API.DTOs;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Hackathon.API.Controllers
     [Route("/api/Register")]
     public class RegisterController : ControllerBase
     {
+        
         [HttpPost]
         public IActionResult RegisterUser([FromBody]UserDTO userCredentials)
         {
@@ -18,7 +20,7 @@ namespace Hackathon.API.Controllers
             else
             {
                 userCredentials.RegisterUser(userCredentials);
-                return Ok("Registration Succesful");
+                return Ok(userCredentials.CheckLoginCredentials(userCredentials));
             }          
         }
     }

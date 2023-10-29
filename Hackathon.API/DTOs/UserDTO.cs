@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Hackathon.API.Entities;
 using Hackathon.API.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System.Data;
 using System.Net;
 
@@ -35,6 +36,25 @@ namespace Hackathon.API.DTOs
                 return UserId;
             }
             return 0;
+        }
+        public IEnumerable<double> getCo2Levels(int UserId)
+        {
+            IEnumerable<double> levels = new List<double>();
+            var parameters = new DynamicParameters();
+            parameters.Add("IdUser", UserId);
+            DataBaseConnection connection = new DataBaseConnection();
+            var con = connection.ConnectToDataBase();
+            
+            var result = con.Query<double>("getCO2Levels",parameters, commandType: CommandType.StoredProcedure);
+            if (result != null)
+            {
+                return result;
+            }
+            else
+            {
+                return levels;
+            }
+
         }
     }
 }

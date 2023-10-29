@@ -1,12 +1,12 @@
 ﻿namespace Hackathon.API.Entities
 {
-    public class Parteners
+    public class Partners
     {
-        public int IdPartener { get; set; }
-        public string namePartener { get; set; }
-        public Parteners(int IdPartener, string namePartener) {
-            this.IdPartener = IdPartener;
-            this.namePartener = namePartener;
+        public int IdPartner { get; set; }
+        public string namePartner { get; set; }
+        public Partners(int IdPartener, string namePartener) {
+            this.IdPartner = IdPartener;
+            this.namePartner = namePartener;
         }  
 
     }
